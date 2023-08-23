@@ -104,7 +104,6 @@ def main():
     # Open Sublist3r and Sunfinder to extract all subdomains
     def getSubdomain(subData):
  try:
-        # Use Amass to gather subdomains
         print('\033[96m[-] Enumerating subdomains using Amass for ' + '\033[94m' + args.domain)
         with Spinner():
             os.popen('amass enum -d ' + subData + ' -o amass_list.txt').read()
@@ -113,7 +112,6 @@ def main():
         print('\033[96m[!] Amass not found\033[91m !!!\n\033[93m[-] Install it to use this feature.')
 
     try:
-        # Use Knockpy to gather subdomains
         print('\033[96m[-] Enumerating subdomains using Knockpy for ' + '\033[94m' + args.domain)
         with Spinner():
             os.popen('knockpy ' + subData + ' -o knockpy_list.txt').read()
