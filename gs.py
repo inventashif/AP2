@@ -3,8 +3,7 @@ import os
 import sys
 import threading
 import subprocess
-pip install amass
-pip install knockpy
+
 if sys.platform.startswith('win'):
     os.system('cls')
 
